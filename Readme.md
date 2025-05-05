@@ -1,34 +1,20 @@
-# Hand Gesture Presentation System
+▶️ Usage
 
-A real-time slide controller using hand-gesture recognition (MediaPipe + OpenCV). Navigate, point, draw, and clear slides hands-free!  
+# 1. (If not already active) Activate virtual environment:
+source venv/bin/activate     # macOS/Linux
+# venv\Scripts\activate      # Windows PowerShell
 
----
+# 2. Run the application:
+python main.py
+Bring your hand into view and use the gestures to control your slides in real time!
+🧰 Troubleshooting
 
-## Features
+If you face issues, try these:
+# If MediaPipe/OpenCV are missing or error out:
+pip install mediapipe opencv-python
 
-- **Next Slide**: Open palm  
-- **Previous Slide**: Thumbs-up  
-- **Pointer Mode**: L-sign (index + thumb)  
-- **Draw Mode**: Pointing (index finger)  
-- **Clear / Undo**: “C” sign (open claw)  
-
----
-
-## Gesture-to-Feature Mapping
-
-| Label | Gesture                | Visual Description                               | Trigger                     |
-|:-----:|:-----------------------|:--------------------------------------------------|:----------------------------|
-| 0     | **Palm**               | All five fingers spread, palm facing forward      | Next Slide                  |
-| 1     | **L Sign**             | Index finger up, thumb out, other fingers folded | Pointer Mode                |
-| 2     | **Thumb Up**           | Only thumb raised, others curled (like 👍)        | Previous Slide              |
-| 3     | **Index Finger Up**    | Only index raised, pointing gesture               | Draw Mode                   |
-| 4     | **C Sign** (Open Claw) | Hand curved like a “C” or holding a ball          | Clear Drawing / Undo        |
-
----
-
-## Installation
-
-1. Clone the repo:  
-   ```bash
-   git clone https://github.com/khushi-saxena/AirSlides.git
-   cd AirSlides
+# If virtual environment didn’t create or activate correctly:
+rm -rf venv
+python3 -m venv venv
+source venv/bin/activate
+Happy Presenting! 🎉
