@@ -1,29 +1,34 @@
-# Hand-Gesture-Presentation-System
-An application based on Landmark Detection used for giving presentations with the help of Hand Gestures i.e without the use of any mouse or touch-pad.<br>
+# Hand Gesture Presentation System
 
-### Introduction :
-This project is a use case of Landmark Detection specifically Hand Tracking. <br>
-As soon as the user shows up his hand in the camera the application detects it. Wenever user makes gestures they are detected and actions associated to those gestures are performed
-Currently there are 6 Functionalities present in this application.
+A real-time slide controller using hand-gesture recognition (MediaPipe + OpenCV). Navigate, point, draw, and clear slides hands-free!  
 
-- <b> Next Slide </b>
-  
-- <b> Previous Slide </b>
+---
 
-- <b> Pointer </b>
+## Features
 
-- <b> Draw </b>
+- **Next Slide**: Open palm  
+- **Previous Slide**: Thumbs-up  
+- **Pointer Mode**: L-sign (index + thumb)  
+- **Draw Mode**: Pointing (index finger)  
+- **Clear / Undo**: “C” sign (open claw)  
 
-- <b> Erase </b>
+---
 
-- <b> Clear Screen </b>
+## Gesture-to-Feature Mapping
 
-### Demo :
-<!-- <img src="Demo.gif" alt="this slowpoke moves"  width="780" height = "480"> -->
+| Label | Gesture                | Visual Description                               | Trigger                     |
+|:-----:|:-----------------------|:--------------------------------------------------|:----------------------------|
+| 0     | **Palm**               | All five fingers spread, palm facing forward      | Next Slide                  |
+| 1     | **L Sign**             | Index finger up, thumb out, other fingers folded | Pointer Mode                |
+| 2     | **Thumb Up**           | Only thumb raised, others curled (like 👍)        | Previous Slide              |
+| 3     | **Index Finger Up**    | Only index raised, pointing gesture               | Draw Mode                   |
+| 4     | **C Sign** (Open Claw) | Hand curved like a “C” or holding a ball          | Clear Drawing / Undo        |
 
-### Main Libs Used :
-- OpenCV lib (for image processing and drawing)
-- Mediapipe lib (for Hand Tracking)
-- Numpy
-# AirSlides
-# AirSlides
+---
+
+## Installation
+
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/khushi-saxena/AirSlides.git
+   cd AirSlides
